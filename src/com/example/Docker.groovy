@@ -16,7 +16,7 @@ class Docker implements Serializable {
 
     def buildDockerImage (){
         script.echo "Building docker image"
-        script.sh "docker build -t pankajdh/testrepo:java-maven-app-$imageVersion ."
+        script.sh "docker build -t pankajdh/testrepo:java-maven-app-$script.imageVersion ."
         script.echo "Image built successfully"
     }
 
