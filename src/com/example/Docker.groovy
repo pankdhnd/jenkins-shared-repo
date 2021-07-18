@@ -10,7 +10,7 @@ class Docker implements Serializable {
         script.withCredentials([
                 script.usernamePassword(credentialsId: '3703ba37-a8bc-4d6e-8ab4-4bbbf4df5e8e', usernameVariable: 'USER', passwordVariable: 'PASS')
         ]) {
-            script.sh 'echo $script.PASS | docker login -u $script.USER --password-stdin'
+            script.sh 'echo $PASS | docker login -u $USER --password-stdin'
         }
     }
 
